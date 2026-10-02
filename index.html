@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Info Sphere – Forts, battles and places</title>
+<style>
+  :root{--link:#0645ad;--visited:#0b0080;--border:#a2a9b1;--panel:#f8f9fa;--head:#cedff2;--text:#202122}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--panel);color:var(--text);font:14px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline} a:visited{color:var(--visited)}
+  :focus-visible{outline:2px solid #36c;outline-offset:1px}
+  .top{background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;padding:8px 16px;flex-wrap:wrap}
+  .logo{font:700 1.5rem Georgia,"Times New Roman",serif;color:#000;white-space:nowrap}
+  .logo:visited{color:#000}
+  .logo small{display:block;font:400 .7rem system-ui,sans-serif;color:#54595d;margin-top:-4px}
+  .top form{flex:1;min-width:200px;max-width:560px;margin-left:auto;display:flex}
+  .top input{flex:1;padding:7px 10px;border:1px solid var(--border);border-radius:2px 0 0 2px;font-size:14px}
+  .top button{padding:7px 14px;border:1px solid var(--border);border-left:0;background:var(--panel);border-radius:0 2px 2px 0;cursor:pointer;font-size:14px}
+  .layout{display:flex;max-width:1200px;margin:0 auto;align-items:flex-start}
+  aside{width:176px;flex:none;padding:16px 8px 16px 16px;font-size:13px}
+  aside h3{font-size:12px;color:#54595d;font-weight:400;margin:14px 0 4px;padding-bottom:2px;border-bottom:1px solid #c8ccd1}
+  aside ul{list-style:none;margin:0;padding:0} aside li{padding:2px 0}
+  main{flex:1;min-width:0;background:#fff;border:1px solid var(--border);border-width:0 1px 1px;padding:16px 20px 24px}
+  h1{font:400 1.8rem Georgia,"Times New Roman",serif;border-bottom:1px solid var(--border);margin:0 0 8px;padding-bottom:2px}
+  h2{font:400 1.2rem Georgia,"Times New Roman",serif;scroll-margin-top:12px;margin:0;padding:4px 10px;background:var(--head);border:1px solid #a3b0bf}
+  .welcome{border:1px solid #a3b0bf;background:#f5faff;padding:10px 14px;margin:10px 0 14px}
+  .welcome p{margin:0}
+  .welcome .stats{font-size:12px;color:#54595d;margin-top:4px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .box{border:1px solid #c8ccd1;margin-bottom:14px;background:#fff;scroll-margin-top:12px}
+  .box .in{padding:8px 12px}
+  .box p{margin:0 0 .5em}
+  .box ul{margin:.3em 0;padding-left:1.3em}
+  .box li{margin-bottom:.25em}
+  .list{list-style:none;margin:0;padding:4px 12px}
+  .list li{padding:6px 0;border-bottom:1px dotted #c8ccd1}
+  .list li:last-child{border-bottom:0}
+  .list a{font:1.05rem Georgia,"Times New Roman",serif}
+  .list span{display:block;color:#54595d;font-size:13px}
+  #none{display:none;padding:8px 12px;color:#54595d}
+  footer{max-width:1200px;margin:0 auto;padding:14px 16px 28px;font-size:12px;color:#54595d}
+  @media(max-width:760px){
+    .layout{display:block} aside{width:auto;padding:10px 16px;border-bottom:1px solid var(--border);background:#fff}
+    aside h3{display:none} aside ul{display:flex;flex-wrap:wrap;gap:2px 14px}
+    main{border-width:0;padding:12px 14px} .cols{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a class="logo" href="index.html">Info Sphere<small>Forts, battles and places</small></a>
+  <form role="search" onsubmit="return false">
+    <input type="search" id="q" placeholder="Search all articles" aria-label="Search all articles">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<div class="layout">
+  <aside aria-label="Navigation">
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="index.html">Main page</a></li>
+      <li><a href="#forts">Forts</a></li>
+      <li><a href="#battles">Battles</a></li>
+      <li><a href="#places">Historic places</a></li>
+      <li><a href="#rulers">Rulers</a></li>
+      <li><a href="#author">About the author</a></li>
+    </ul>
+    <h3>Featured</h3>
+    <ul>
+      <li><a href="read-more.html">Taj Mahal</a></li>
+      <li><a href="chittorgarh-fort.html">Chittorgarh Fort</a></li>
+      <li><a href="akbar.html">Akbar</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <h1>Welcome to Info Sphere</h1>
+    <div class="welcome">
+      <p>Info Sphere is a free reference on the forts, battles, places and rulers that shaped the past.</p>
+      <p class="stats">Owner and author: <b>Aaditya Duggal</b></p>
+      <p class="stats">16 articles · <a href="#forts">4 forts</a> · <a href="#battles">4 battles</a> · <a href="#places">5 places</a> · <a href="#rulers">3 rulers</a></p>
+    </div>
+
+    <div class="cols">
+      <section class="box">
+        <h2>Featured article</h2>
+        <div class="in">
+          <p><b><a href="read-more.html">Taj Mahal</a></b> is a white-marble mausoleum in Agra, built by Shah Jahan in memory of Mumtaz Mahal. It was inscribed as a UNESCO World Heritage Site in 1983.</p>
+          <p><a href="read-more.html">Read the full article</a></p>
+        </div>
+      </section>
+      <section class="box">
+        <h2>Did you know…</h2>
+        <div class="in">
+          <ul>
+            <li>…that <a href="kumbhalgarh-fort.html">Kumbhalgarh</a> has a wall about 36 km long?</li>
+            <li>…that <a href="humayuns-tomb.html">Humayun's Tomb</a> is regarded as the first garden-tomb in India?</li>
+            <li>…that <a href="battle-of-buxar.html">Buxar</a> gave the East India Company the revenue rights of Bengal, Bihar and Orissa?</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <section class="box" id="forts">
+      <h2>Forts</h2>
+      <ul class="list">
+        <li><a href="red-fort.html">Red Fort</a><span>Mughal palace-fort in Delhi, built 1638–1648.</span></li>
+        <li><a href="agra-fort.html">Agra Fort</a><span>Red sandstone fort on the Yamuna, begun by Akbar.</span></li>
+        <li><a href="chittorgarh-fort.html">Chittorgarh Fort</a><span>Hill fort and old capital of Mewar.</span></li>
+        <li><a href="kumbhalgarh-fort.html">Kumbhalgarh Fort</a><span>Mewar fortress with a very long perimeter wall.</span></li>
+      </ul>
+    </section>
+
+    <section class="box" id="battles">
+      <h2>Battles</h2>
+      <ul class="list">
+        <li><a href="first-battle-of-panipat.html">First Battle of Panipat</a><span>1526: Babur defeats Ibrahim Lodi.</span></li>
+        <li><a href="battle-of-haldighati.html">Battle of Haldighati</a><span>1576: Maharana Pratap faces a Mughal army.</span></li>
+        <li><a href="battle-of-plassey.html">Battle of Plassey</a><span>1757: the East India Company wins in Bengal.</span></li>
+        <li><a href="battle-of-buxar.html">Battle of Buxar</a><span>1764: the Company defeats three allied powers.</span></li>
+      </ul>
+    </section>
+
+    <section class="box" id="places">
+      <h2>Historic places</h2>
+      <ul class="list">
+        <li><a href="read-more.html">Taj Mahal</a><span>Marble mausoleum in Agra.</span></li>
+        <li><a href="hampi.html">Hampi</a><span>Ruined capital of the Vijayanagara Empire.</span></li>
+        <li><a href="qutub-minar.html">Qutub Minar</a><span>Tall minaret begun around 1199 in Delhi.</span></li>
+        <li><a href="fatehpur-sikri.html">Fatehpur Sikri</a><span>Akbar's short-lived capital near Agra.</span></li>
+        <li><a href="humayuns-tomb.html">Humayun's Tomb</a><span>Garden tomb in Delhi, completed in 1572.</span></li>
+      </ul>
+    </section>
+
+    <section class="box" id="rulers">
+      <h2>Rulers</h2>
+      <ul class="list">
+        <li><a href="akbar.html">Akbar</a><span>Third Mughal emperor, ruled 1556–1605.</span></li>
+        <li><a href="shah-jahan.html">Shah Jahan</a><span>Fifth Mughal emperor and builder of the Taj Mahal.</span></li>
+        <li><a href="shivaji.html">Shivaji</a><span>Founder of the Maratha state.</span></li>
+      </ul>
+    </section>
+
+    <p id="none">No article matches your search.</p>
+
+    <section class="box">
+      <h2 id="author">About the author</h2>
+      <div class="in">
+        <p><b>Aaditya Duggal</b> is the owner and author of Info Sphere. He is a developer in progress who enjoys building, learning and creating, and is currently learning HTML, CSS and JavaScript.</p>
+        <p>Info Sphere is a simple HTML-based knowledge website with articles on history, culture and more, written and built by him.</p>
+        <p>GitHub: <a href="https://github.com/AadityaDev-tech">AadityaDev-tech</a> · Email: <a href="mailto:aadityaduggal175@outlook.com">aadityaduggal175@outlook.com</a></p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>Info Sphere · Made by Aaditya Duggal · Owner and author: Aaditya Duggal</footer>
+
+<script>
+  // Filters the article lists as you type
+  var q = document.getElementById('q');
+  q.addEventListener('input', function(){
+    var t = q.value.trim().toLowerCase(), shown = 0;
+    document.querySelectorAll('.list li').forEach(function(li){
+      var hit = li.textContent.toLowerCase().includes(t);
+      li.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    document.querySelectorAll('.box[id]').forEach(function(b){
+      b.style.display = b.querySelector('.list li:not([style*="none"])') ? '' : 'none';
+    });
+    document.getElementById('none').style.display = shown ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
